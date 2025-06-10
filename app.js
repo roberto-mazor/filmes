@@ -23,9 +23,16 @@ filme3 = {
 
 filme4 = {
     titulo: "Pecadores",
-    foto: "filme3.jpg",
+    foto: "filme4.jpg",
     avalicao: "5/10",
     duracao: "1h550m"
+}
+
+filme5 = {
+    titulo: "A Fera",
+    foto: "filme5.jpg",
+    avalicao: "7/10",
+    duracao: "1h46m"
 }
 
 {/* 
@@ -37,7 +44,7 @@ filme4 = {
         </div> */}
 
 function fnMontarCartao(FilmeAtual){
-    document.querySelector(".lista-filmes").innerHTML =`
+    document.querySelector(".lista-filmes").innerHTML +=`
         <div classe="card-filme">
             <img src="img/${FilmeAtual.foto}">
             <h3>${FilmeAtual.titulo}</h3>
@@ -49,3 +56,6 @@ function fnMontarCartao(FilmeAtual){
 
 fnMontarCartao(filme1)
 fnMontarCartao(filme2)
+fnMontarCartao(filme3)
+fnMontarCartao(filme4)
+fnMontarCartao(filme5)
