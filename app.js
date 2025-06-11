@@ -35,15 +35,36 @@ filme5 = {
     duracao: "1h46m"
 }
 
-{/* 
-    <div class="lista-filmes">
-        <div class="card-filme">
-            <img src="img/filme1.webp">
-            <h3>Jurassic Park</h3>
-            <span>⭐ 10/10</span>
-        </div> */}
+// {/* 
+//     <div class="lista-filmes">
+//         <div class="card-filme">
+//             <img src="img/filme1.webp">
+//             <h3>Jurassic Park</h3>
+//             <span>⭐ 10/10</span>
+//         </div> */}
 
-function fnMontarCartao(FilmeAtual){
+// function fnMontarCartao(FilmeAtual){
+//    document.querySelector(".lista-filmes").innerHTML +=`
+//         <div classe="card-filme">
+//             <img src="img/${FilmeAtual.foto}">
+//             <h3>${FilmeAtual.titulo}</h3>
+//             <span> ⭐ ${FilmeAtual.avalicao}</span>
+//         </div>
+//         `
+    
+// }
+
+// fnMontarCartao(filme1)
+// fnMontarCartao(filme2)
+// fnMontarCartao(filme3)
+// fnMontarCartao(filme4)
+// fnMontarCartao(filme5)
+
+// uma outra forma de fazer - usando função anônima para fazer os cards
+
+let todosOsFilsmes = [filme1, filme2, filme3, filme4, filme5]
+
+todosOsFilsmes.forEach ((FilmeAtual) => {
     document.querySelector(".lista-filmes").innerHTML +=`
         <div classe="card-filme">
             <img src="img/${FilmeAtual.foto}">
@@ -51,11 +72,4 @@ function fnMontarCartao(FilmeAtual){
             <span> ⭐ ${FilmeAtual.avalicao}</span>
         </div>
         `
-    
-}
-
-fnMontarCartao(filme1)
-fnMontarCartao(filme2)
-fnMontarCartao(filme3)
-fnMontarCartao(filme4)
-fnMontarCartao(filme5)
+})
